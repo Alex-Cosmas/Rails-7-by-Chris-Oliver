@@ -1,6 +1,13 @@
-<h1>
-  <%= @blog_post.title %>
-</h1>
 <div>
-  <%= @blog_post.body %>
+
+
+  <div>
+    <h1>
+      <%= @blog_post.title %>
+    </h1>
+    <%= link_to "Edit", edit_blog_post_path(@blog_post) if user_signed_in?  %>
+  </div>
+  <div>
+    <%= @blog_post.body %>
+  </div>
 </div>
